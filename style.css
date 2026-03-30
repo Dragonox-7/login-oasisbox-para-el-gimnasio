@@ -1,0 +1,171 @@
+:root {
+    --negro-profundo: #050505;
+    --morado-oasis: #6a0dad;
+    --violeta-neon: #a855f7;
+    --blanco: #ffffff;
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* --- BASE --- */
+body {
+    background: radial-gradient(circle at top left, #2a0e4a 0%, #050505 70%);
+    color: var(--blanco);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-entrance {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* --- CONTENEDOR DE CRISTAL --- */
+.glass-box {
+    max-width: 750px;
+    width: 100%;
+    background: rgba(40, 40, 40, 0.4);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-radius: 35px;
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    background: linear-gradient(to bottom, #fff, var(--violeta-neon));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+/* --- SECCIÓN LOGIN --- */
+.login-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 25px 0;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.section-title {
+    color: var(--violeta-neon);
+    font-weight: bold;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    margin: 5px;
+    width: 80%;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--violeta-neon);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* --- BOTONES --- */
+.btn-main {
+    background: linear-gradient(135deg, var(--morado-oasis), var(--violeta-neon));
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.4);
+}
+
+.btn-main:hover { transform: scale(1.05); filter: brightness(1.2); }
+.btn-main:active { transform: scale(0.95); }
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid var(--violeta-neon);
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover { background: rgba(168, 85, 247, 0.2); }
+
+/* --- PRECIO --- */
+.price-highlight {
+    background: rgba(168, 85, 247, 0.1);
+    padding: 20px;
+    border-radius: 25px;
+    margin: 20px 0;
+    border: 1px solid var(--violeta-neon);
+}
+
+.price-tag {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 5px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.price-tag span { font-size: 0.4em; opacity: 0.7; }
+
+/* --- TABLAS --- */
+.table-container {
+    margin-top: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+table { width: 100%; border-collapse: collapse; background: rgba(0,0,0,0.2); }
+th { background: rgba(106, 13, 173, 0.3); padding: 15px; color: var(--violeta-neon); font-family: 'Orbitron'; }
+td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.time-col { color: var(--violeta-neon); font-weight: bold; }
+
+/* --- IMÁGENES --- */
+.puzzle-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.puzzle-container img {
+    width: 33.33%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: 0.4s;
+}
+
+.puzzle-container img:hover { filter: brightness(1.1); transform: scale(1.05); }
+
+.ig-link { color: var(--violeta-neon); text-decoration: none; font-weight: bold; }
