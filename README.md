@@ -1,3 +1,5 @@
 # login-oasisbox-para-el-gimnasio
 solo experimento
-aun no se mucho de esto... 
+aun no se mucho de esto...
+es solo visual y estructural, el script lo hare cuando aprenda
+
